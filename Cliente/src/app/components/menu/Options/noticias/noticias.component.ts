@@ -53,7 +53,7 @@ export class NoticiasComponent implements OnInit {
 
     console.log('Datos a enviar:', nuevaNoticia);
 
-    this.http.post('https://biblioteca-aobw.onrender.com/noticias', nuevaNoticia).subscribe(
+    this.http.post('https://biblioteca-aobw.onrender.com/noticias/noticias', nuevaNoticia).subscribe(
       () => {
         this.snackBar.open('Noticia agregada exitosamente', 'Cerrar', { duration: 3000 });
         this.cargarNoticias();

@@ -26,15 +26,13 @@ export class RegistroLectorComponent {
     if (this.lector.NombreCompleto && this.lector.NumeroControl && this.lector.Correo) {
       this.http.post('https://biblioteca-aobw.onrender.com/lector', this.lector).subscribe(
         (response: any) => {
-          this.snackBar.open('Lector registrado exitosamente', 'Cerrar', {
-
-          });
+          this.snackBar.open('Lector registrado exitosamente', 'Cerrar', {});
         },
         (error) => {
-          this.snackBar.open('Error al registrar el lector:', 'Cerrar',{
-        });
-    }
-  );
+          console.error('Error al registrar el lector:', error);
+          this.snackBar.open('Error al registrar el lector: ' + error.message, 'Cerrar', {});
+        }
+      );
     } else {
       this.errorMessage = 'Todos los campos son obligatorios';
     }

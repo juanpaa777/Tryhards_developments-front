@@ -113,7 +113,7 @@ export class MapaComponent implements OnInit {
 
   cargarNoticias() {
     console.log('Cargando noticias...');
-    this.http.get<any[]>('http://localhost:3000/noticias').subscribe(
+    this.http.get<any[]>('https://d2l31qkx2rm6ft.cloudfront.net/noticias').subscribe(
       noticias => {
         console.log('Noticias recibidas:', noticias);
         noticias.forEach(noticia => {

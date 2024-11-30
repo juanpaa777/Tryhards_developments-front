@@ -173,7 +173,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   }
 
   private cargarNoticias() {
-    this.http.get<any[]>('http://localhost:3000/noticias').subscribe(data => {
+    this.http.get<any[]>('https://biblioteca-aobw.onrender.com/noticias').subscribe(data => {
       this.noticiasItems = data;
     }, error => {
       console.error('Error al cargar noticias:', error);

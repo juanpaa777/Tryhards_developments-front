@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MultasService {
-  private apiUrl = 'http://localhost:3000/multas';  // Cambia esto a la URL de tu API
+  private apiUrl = 'https://biblioteca-aobw.onrender.com/multas';  // Cambia esto a la URL de tu API
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class MultasService {
   }
 
   getLectores(): Observable<any[]>{
-    return this.http.get<any[]>('http://localhost:3000/lector');
+    return this.http.get<any[]>('https://biblioteca-aobw.onrender.com/lector');
   }
 
   createLector(lector: any): Observable<any> {
@@ -26,7 +26,7 @@ export class MultasService {
   }
 
   getPrestamos(): Observable<any[]>{
-    return this.http.get<any[]>('http://localhost:3000/loan')
+    return this.http.get<any[]>('https://biblioteca-aobw.onrender.com/loan')
   }
 
   createPrestamo(prestamo: any): Observable<any> {

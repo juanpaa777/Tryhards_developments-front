@@ -9,8 +9,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class AuthDiscordService {
   private clientId = '1293484425920778331';
   private clientSecret = 'kNJpcsxvAwcMDjtT61iQuGAy6PlBPtYY';
-  private redirectUri = 'http://localhost:4200/menu';
-  private authUrl = 'https://discord.com/oauth2/authorize?client_id=1293484425920778331&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fmenu&scope=identify+email+guilds+connections+activities.read+relationships.read';
+  private redirectUri = 'https://d2l31qkx2rm6ft.cloudfront.net/menu';
+  private authUrl = 'https://discord.com/oauth2/authorize?client_id=1293484425920778331&response_type=code&redirect_uri=https%3A%2F%2Fd2l31qkx2rm6ft.cloudfront.net%2Fmenu&scope=identify+email+guilds+connections+relationships.read+activities.read';
   private tokenUrl = 'https://discord.com/api/oauth2/token';
   private apiUrl = 'https://discord.com/api/users/@me';
 
